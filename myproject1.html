@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootcss.css">
+    <script src="bootjs.js"></script>
+    <noscript>please activate your javascript in the background.</noscript>
+    <script src="jquery.min.js"></script>
+    <style>
+        body{
+            overflow-x: hidden;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        :root{
+            --small:10px;
+            --big:17px;
+            --choco:chocolate;
+            --av:25px;
+        }
+        @keyframes anim1{
+            from{top: -70px;}
+            to{top: 0;}
+        }
+   
+     
+        nav{
+        
+            animation-name: anim1;
+            animation-duration: 500ms;
+            animation-timing-function: ease-out;
+            animation-delay: 500ms;
+            animation-play-state: running;
+            animation-fill-mode: forwards;
+            animation-direction: normal;
+            animation-iteration-count: 1;
+            top: -70px;
+            position: relative;
+            width: 100%;
+            height: auto;
+            box-shadow: 3px 4px 30px grey;
+        }
+        ul:not(div ul){
+            position: relative;
+
+         
+            width: 100%;
+            padding: 0;
+            margin: 0;
+            background-color: rgb(93, 96, 185);
+            list-style-type: none;
+
+        }
+        ul:first-child li{
+            float: left;
+            width: 17.65%;
+            
+        }
+        ul:first-child li a{
+
+            text-transform: uppercase;
+            display: block;
+            text-decoration-line: none;
+            font-size: var(--big);
+            text-emphasis: inherit;
+            text-indent: 0;
+            line-height: normal;
+            font-weight: 300;
+
+        color: black;
+        background-color: gainsboro;
+        padding: 22px;
+        }
+
+        .btn{
+            padding: 21px;
+            background-color: black;
+            color: azure;
+            border-radius: 0;
+
+            
+        }
+        .dropdown-item, .dropdown-item-text {
+            color: white;
+        }
+        .dropdown-item:hover{
+            background-color:rgb(152, 178, 251);
+        }
+        @keyframes anim2{
+            from{opacity: 0.2;}
+            to{opacity: 1;}
+        }
+        .headimage{
+            animation-name:anim2;
+            animation-duration: 1s;
+            animation-delay: 0;
+            animation-timing-function: linear;
+            animation-play-state: running;
+            animation-fill-mode: forwards;
+            animation-direction: normal;
+            animation-iteration-count: 1;
+            position: relative;
+            background-image: url(mars1.jpg);
+            width: 100%;
+            height: 480px;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: scroll;
+            filter:sepia(20);
+        }
+        @keyframes showheading{
+            from{opacity: 0;}
+            to{opacity: 1;}
+        }
+        .headingin{
+            opacity: 0;
+            animation-name: showheading;
+            animation-duration: 1s;
+            animation-delay: 1200ms;
+            animation-timing-function: ease-in;
+            animation-direction: normal;
+            animation-play-state: running;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+            position: relative;
+            color: white;
+            letter-spacing: 3px;
+            word-spacing: 2px;
+            text-transform: capitalize;
+            font-weight: lighter;
+            text-overflow: clip;
+            writing-mode: horizontal-tb;
+            word-wrap: break-word;
+            word-break: break-all;
+            text-align: center;
+      
+        }
+        .cotainer{
+            position: relative;
+            width: 100%;
+            height: auto;
+
+
+        
+        }
+        .item{
+            position: relative;
+            display: inline-block;
+            left: 50px;
+  
+            width: 400px;
+            height: 250px;
+        }
+        .overlay{
+            position: absolute;
+            bottom: 0%;
+            left: 0%;
+            right: 0;
+            background-color: rgb(48, 57, 69);
+            overflow: hidden;
+            color: white;
+            width: 0;
+            height: 100%;
+            transition: .5s ease-in-out;
+        }
+        .image{
+            display: block;
+            width: 100%;
+            height: 250px;
+        }
+        .item:hover .overlay{
+            width: 100%;
+        }
+        .text{
+            white-space: nowrap;
+            position: absolute;
+            overflow: hidden;
+            text-transform: uppercase;
+            font-size: var(--av);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+<nav id="navme">
+    <ul id="ul1">
+        <li><a href="#">About us</a></li>
+        <li><a href="#">contact us</a></li>
+        <!--drop down for diifrent categories of photoes-->
+
+        
+        <li><a href="#">portraits</a></li>
+        <li><a href="#">order picture</a></li>
+        <li><a href="#">nft shop</a></li>
+        
+    </ul>
+    <div class="dropdown">
+        <button class="dropdown-toggle btn" style="text-transform: uppercase;letter-spacing: 2px;" data-bs-toggle="dropdown">photoes</button>
+        <ul class="dropdown-menu" style="background-color: rgba(79, 73, 73, 0.642);">
+            <li><h5 class="dropdown-header" >categories</h5></li>
+            <li><a href="#" class="dropdown-item-text">space</a></li>
+            <li><a href="#" class="dropdown-item">sea</a></li>
+            <li><a href="#" class="dropdown-item">animals</a></li>
+            <li><a href="#" class="dropdown-item">forest</a></li>
+            <li><a href="#" class="dropdown-item">technology</a></li>
+            <li><a href="#" class="dropdown-item">others</a></li>
+
+
+
+        </ul>
+
+    </div>
+</nav>
+<div class="headimage">
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+<h1 class="h1 text-light headingin">future explorations ...</h1>
+</div>
+<br><br>
+
+<div class="container">
+
+    <div class="item">
+        <img src="earth.jpg" class="image" alt="">
+        <div class="overlay">
+            <div class="text">
+
+                earth
+
+            </div>
+
+        </div>
+    </div>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+    <div class="item">
+        <img src="mars1.jpg" class="image" alt="">
+        <div class="overlay">
+            <div class="text">
+
+                mars
+
+            </div>
+
+        </div>
+    </div>
+
+
+</div>
+
+
+
+
+
+</body>
+</html>
